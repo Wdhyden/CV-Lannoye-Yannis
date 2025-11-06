@@ -11,7 +11,7 @@
     --rose-soft: rgba(255, 111, 216, 0.12);
 }
 
-:root[data-theme="light"] {
+disable:root[data-theme="light"] {
     --noir: #f5f5f5;
     --gris: #1f2020;
     --rose: #ff6fd8;
@@ -422,4 +422,5 @@ header img {
     100% {
         filter: drop-shadow(0 0 10px var(--rose)) drop-shadow(0 0 25px var(--rose));
     }
+
 }
