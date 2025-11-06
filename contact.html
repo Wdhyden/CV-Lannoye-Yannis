@@ -1,0 +1,70 @@
+<!-- Template graphique basé sur le CV Yannis Lannoye, adapté à la colorimétrie du logo OUT OF BOUNDS -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Yannis Lannoye</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <nav>
+        <a href=" index.html">Accueil</a>
+        <a href="Portfollio/projets.html">Projets</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <header>
+        <img src="images/logooutofbounds.png" alt="Logo Out of Bounds">
+        <h1>Yannis Lannoye</h1>
+        <address>
+            <a href="misc/contact.vcf" download>Ajouter le contact</a>
+            <p><strong>Téléphone :</strong> <a href="tel:+33783166737">07 83 16 67 37</a></p>
+            <p><strong>Email :</strong> <a href="mailto:Lannoye.Yannis@proton.me">Lannoye.Yannis@proton.me</a></p>
+            <p><strong>Adresse :</strong> <a href="https://maps.app.goo.gl/qRg4gQ59BkmzqDBx6" target="_blank">Calais
+                    Secteur des cailloux</a></p>
+            <p><strong>Permis :</strong> <a
+                    href="https://www.securite-routiere.gouv.fr/node/597/permis-auto-categorie-b/passer-son-permis-b">B</a>
+            </p>
+        </address>
+        <header>
+            <h1>Page de contact</h1>
+            <section class="contact">
+                <p><strong>remplissez ce formulaire pour me contacter</strong></p>
+            </section>
+        </header>
+
+        <main>
+            <form action="/ma-page-de-traitement" method="post">
+                <ul>
+                    <li>
+                        <label for="name">Nom&nbsp;:</label>
+                        <input type="text" id="name" name="user_name" />
+                    </li>
+                    <li>
+                        <label for="mail">E-mail&nbsp;:</label>
+                        <input type="email" id="mail" name="user_mail" />
+                    </li>
+                    <li>
+                        <label for="msg">Message&nbsp;:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                    </li>
+                </ul>
+            </form>
+            <ul>
+                <li>
+                    <button>Insérer une pièce jointe</button>
+                    <button>envoyer</button>
+                </li>
+            </ul>
+
+        </main>
+
+        <footer>
+            <p>© 2025 Yannis Lannoye — Inspiré par le style “OUT OF BOUNDS”</p>
+        </footer>
+</body>
+
+</html>
