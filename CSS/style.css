@@ -325,24 +325,7 @@ article:hover {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 768px) {
 
-    .logos-list,
-    .skills-list,
-    .projets-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo-item,
-    .projet {
-        width: 260px;
-    }
-
-    header {
-        padding: 1.6em 0.8em;
-    }
-}
 
 @keyframes testanim {
     from {
