@@ -219,10 +219,8 @@ h2 {
 .lang-list,
 .loisirs-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    /* grille responsive */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 1rem;
-    /* espace entre les cases */
     list-style: none;
     padding: 10px;
     margin: 0;
@@ -241,6 +239,7 @@ h2 {
     transition: transform 0.18s ease, box-shadow 0.2s ease;
 }
 
+/* Effet hover */
 .skills-list li:hover,
 .lang-list li:hover,
 .loisirs-list li:hover {
@@ -248,12 +247,14 @@ h2 {
     box-shadow: 0 6px 12px rgba(255, 111, 216, 0.3);
 }
 
+/* 📱 Ajustement mobile */
 @media (max-width: 600px) {
 
     .skills-list,
     .lang-list,
     .loisirs-list {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colonnes fixes sur mobile */
         gap: 0.8rem;
     }
 }
