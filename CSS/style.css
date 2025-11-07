@@ -332,7 +332,6 @@ article:hover {
     .projets-list {
         flex-direction: column;
         align-items: center;
-        display: flex;
     }
 
     .logo-item,
