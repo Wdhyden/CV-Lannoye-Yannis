@@ -218,11 +218,14 @@ h2 {
 .skills-list,
 .lang-list,
 .loisirs-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* grille responsive */
+    gap: 1rem;
+    /* espace entre les cases */
     list-style: none;
     padding: 10px;
+    margin: 0;
 }
 
 .skills-list li,
@@ -230,17 +233,19 @@ h2 {
 .loisirs-list li {
     background: var(--rose);
     color: var(--noir);
-    padding: 0.5em 0.9em;
+    padding: 0.6em 1em;
     border-radius: 6px;
     font-weight: 700;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45);
-    transition: transform 0.18s ease;
+    text-align: center;
+    transition: transform 0.18s ease, box-shadow 0.2s ease;
 }
 
 .skills-list li:hover,
 .lang-list li:hover,
 .loisirs-list li:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 111, 216, 0.3);
 }
 
 /* ---------- Footer ---------- */
