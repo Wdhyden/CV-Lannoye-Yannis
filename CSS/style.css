@@ -219,35 +219,38 @@ h2 {
 .lang-list,
 .loisirs-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    /* Crée une grille fluide et responsive */
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 1rem;
     list-style: none;
     padding: 10px;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    /* pour éviter qu’elle s’étale trop sur PC */
 }
 
 .skills-list li,
 .lang-list li,
 .loisirs-list li {
-    background: var(--rose);
-    color: var(--noir);
+    background: var(--rose, #ff91c1);
+    color: var(--noir, #111);
     padding: 0.6em 1em;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: 700;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
     text-align: center;
-    transition: transform 0.18s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Effet hover */
+/* Effet visuel */
 .skills-list li:hover,
 .lang-list li:hover,
 .loisirs-list li:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(255, 111, 216, 0.3);
+    box-shadow: 0 6px 10px rgba(255, 111, 216, 0.3);
 }
 
-/* 📱 Ajustement mobile */
+/* ✅ Règle spéciale mobile */
 @media (max-width: 600px) {
 
     .skills-list,
@@ -255,7 +258,6 @@ h2 {
     .loisirs-list {
         grid-template-columns: repeat(2, 1fr);
         /* 2 colonnes fixes sur mobile */
-        gap: 0.8rem;
     }
 }
 
