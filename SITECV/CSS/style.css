@@ -1,0 +1,397 @@
+/* ===========================
+   OUT OF BOUNDS — style.css
+   Palette sombre / accents rose
+   =========================== */
+
+:root {
+    --noir: #0a0a0a;
+    --gris: #1f2020;
+    --rose: #ff6fd8;
+    --blanc: #f5f5f5;
+    --rose-soft: rgba(255, 111, 216, 0.12);
+}
+
+:root[data-theme="light"] {
+    --noir: #f5f5f5;
+    --gris: #1f2020;
+    --rose: #ff6fd8;
+    --blanc: #f5f5f5;
+    --rose-soft: rgba(194, 24, 91, 0.12);
+}
+
+/* ---------- Global ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: url('misc/Curseur%20perso1.png'), auto;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+html,
+body {
+    min-height: 100vh;
+    height: 100%;
+    overflow-x: hidden;
+    color: var(--blanc);
+    background-color: var(--noir);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    background: var(--gris);
+    padding: 1em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+nav a {
+    color: var(--rose);
+    margin: 0 1.2em;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    transition: color 0.25s ease, transform 0.18s ease;
+}
+
+nav a:hover {
+    color: var(--blanc);
+    transform: translateX(5px);
+}
+
+/* ---------- Header ---------- */
+header {
+    position: relative;
+    z-index: 10;
+    background: var(--gris);
+    padding: 2.5em 1em;
+    text-align: center;
+    border-bottom: 3px solid var(--rose);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 1em;
+    transition: filter 0.4s ease-in-out;
+}
+
+header h1 {
+    color: var(--rose);
+    font-size: 2.4em;
+    margin-bottom: 0.4em;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 111, 216, 0.6);
+}
+
+.contact {
+    opacity: 0.95;
+    font-size: 1.05em;
+}
+
+/* ---------- Main container ---------- */
+main {
+    max-width: 1100px;
+    margin: 2.5em auto;
+    padding: 2.2em;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(31, 32, 32, 0.98), rgba(28, 28, 28, 0.95));
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+}
+
+/* ---------- Headings ---------- */
+h2 {
+    color: var(--rose);
+    border-bottom: 2px solid var(--rose);
+    padding-bottom: 0.4em;
+    margin-top: 0;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- Sections ---------- */
+.section {
+    margin-bottom: 2em;
+}
+
+/* ---------- Cards / logos / projets ---------- */
+ul.logos-list,
+ul.projets-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 1.6em 0 0;
+}
+
+.logo-item,
+.projet {
+    background: var(--gris);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--blanc);
+}
+
+.logo-item:hover,
+.projet:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.12);
+}
+
+.logo-img,
+.projet img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.logo-title,
+.projet-title {
+    font-size: 1.15em;
+    font-weight: 700;
+    margin-bottom: 0.4em;
+    color: var(--rose);
+    text-shadow: 0 0 8px rgba(255, 111, 216, 0.35);
+}
+
+.logo-desc,
+.projet-desc {
+    font-size: 0.98em;
+    opacity: 0.9;
+    margin-bottom: 0.8em;
+}
+
+.projet-link a {
+    color: var(--rose);
+    text-decoration: underline;
+    font-weight: 700;
+    transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.projet-link a:hover {
+    color: var(--blanc);
+    transform: translateY(-2px);
+}
+
+/* ---------- CV & Text sections ---------- */
+.cv-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.formation-intitule {
+    font-style: italic;
+    opacity: 0.85;
+    display: block;
+    margin-top: 0.3em;
+}
+
+/* ---------- Skills / Langues / Loisirs ---------- */
+.skills-list,
+.lang-list,
+.loisirs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.skills-list li,
+.lang-list li,
+.loisirs-list li {
+    background: var(--rose);
+    color: var(--noir);
+    padding: 0.6em 1em;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-list li:hover,
+.lang-list li:hover,
+.loisirs-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(255, 111, 216, 0.3);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background: var(--gris);
+    color: var(--rose);
+    text-align: center;
+    padding: 1em;
+    border-top: 3px solid var(--rose);
+    margin-top: 2em;
+    font-size: 0.92em;
+}
+
+/* ---------- Links ---------- */
+a {
+    color: var(--rose);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--blanc);
+    text-decoration: underline;
+}
+
+/* ---------- Articles ---------- */
+article {
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 4px solid var(--rose);
+    padding: 1em;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    transition: background 0.25s;
+}
+
+article:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* ---------- Images ---------- */
+.imgsujet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    margin-top: 1.5em;
+    width: 100%;
+}
+
+.imgsujet img {
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Animations ---------- */
+.rainbow {
+    animation: testanim 3s infinite ease-in-out;
+}
+
+@keyframes testanim {
+    0% {
+        color: red;
+    }
+
+    10% {
+        color: orange;
+    }
+
+    20% {
+        color: yellow;
+    }
+
+    40% {
+        color: green;
+    }
+
+    50% {
+        color: lightblue;
+    }
+
+    60% {
+        color: darkblue;
+    }
+
+    100% {
+        color: purple;
+    }
+}
+
+@keyframes degrade {
+
+    0%,
+    100% {
+        color: var(--rose);
+    }
+
+    50% {
+        color: purple;
+    }
+}
+
+.degrade {
+    animation: degrade 10s infinite ease-in-out;
+}
+
+@keyframes neonGlow {
+    0% {
+        filter: drop-shadow(0 0 8px var(--rose)) drop-shadow(0 0 16px var(--rose));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px var(--rose)) drop-shadow(0 0 40px var(--rose));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 10px var(--rose)) drop-shadow(0 0 25px var(--rose));
+    }
+}
+
+/* ---------- Canvas Particules ---------- */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ---------- Bouton Thème ---------- */
+#theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--rose);
+    font-size: 1.4em;
+    cursor: pointer;
+    margin-left: 1em;
+    transition: transform 2s ease, color 2s ease;
+}
+
+#theme-toggle:hover {
+    color: var(--blanc);
+    transform: rotate(20deg);
+}
+
+/* ---------- Z-Index fix pour particules ---------- */
+nav,
+header,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+
+    .skills-list,
+    .lang-list,
+    .loisirs-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
